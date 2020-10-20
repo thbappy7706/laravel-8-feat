@@ -24,3 +24,10 @@ Route::get('users/{name}', function ($name=null) {
 
 
 })->where('name', '[a-zA-Z]+');
+
+
+//numeric
+Route::get('products/{id}', function ($id=null) {
+
+    return 'Product Id is ' . $id;
+})->where('id','[0-9]+');
