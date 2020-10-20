@@ -31,3 +31,16 @@ Route::get('products/{id}', function ($id=null) {
 
     return 'Product Id is ' . $id;
 })->where('id','[0-9]+');
+
+
+//Method testing
+Route::match(['get', 'post'], '/students', function (Request $req) {
+
+    return 'Requested Method is '. $req->method();
+});
+
+Route::any('posts', function (Request $req) {
+
+    return 'Requested method is '. $req->method();
+
+});
