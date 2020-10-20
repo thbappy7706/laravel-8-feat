@@ -12,4 +12,23 @@ class HomeController extends Controller
 
         return 'Hi this is based on homecontroller, Name is :' . $name;
     }
+
+
+ public function users()
+ {
+
+    $name = 'Tanvir Hossen Bappy';
+    $users = array(
+            "name"=>"Tanvir",
+            "email"=>"new@gmail.com",
+            "phone"=> "1325132523"
+
+
+    );
+
+    return view('users', compact('name','users'));
+
+
+ }
+
 }
