@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ClientController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,6 +23,10 @@ Route::get('/', function () {
 Route::get('home/{name}', [HomeController::class,'index'] )->name('home.index');
 
 Route::get('users', [HomeController::class, 'users'])->name('home.user');
+
+
+//HTTP
+Route::get('/posts',[ClientController::class,'getAllPost'])->name('posts.getAllPost');
 
 
 
