@@ -27,6 +27,10 @@ Route::get('users', [HomeController::class, 'users'])->name('home.user');
 
 //HTTP
 Route::get('/posts',[ClientController::class,'getAllPost'])->name('posts.getAllPost');
+Route::get('/posts/{id}',[ClientController::class,'getPostById'])->name('posts.getPostById');
+Route::get('/add-posts',[ClientController::class,'addPost'])->name('posts.add');
+Route::get('/update-posts',[ClientController::class,'updatePost'])->name('posts.update');
+Route::get('/delete-post{id}',[ClientController::class,'deletePost'])->name('posts.delete');
 
 
 
