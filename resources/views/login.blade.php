@@ -21,11 +21,19 @@
                                 <div class="form-group">
                                   <label for="exampleInputEmail1">Email address</label>
                                   <input type="email" class="form-control" id="email"  name="email">
+                                  @error('email')
+                                <span class="text-danger">{{$message}}</span>
+                                  @enderror
+
+                                  
                                 </div>
                                 <div class="form-group">
                                   <label for=" Password">Password</label>
-                                  <input type="password" class="form-control" id="password" name="password">
-                                </div>
+                                <input type="password" class="form-control" id="password" name="password">
+                                @error('password')
+                                <span class="text-danger">{{$message}}</span>
+                                  @enderror
+                            </div>
 
                                 <button type="submit" class="btn btn-primary">Submit</button>
                               </form>
