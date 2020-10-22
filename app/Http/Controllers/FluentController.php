@@ -13,9 +13,9 @@ class FluentController extends Controller
     public function index()
     {
 
-        echo "<h1> Fluent Strings</h1>";
-        $slice = Str::of('Welcome to Tanvir Hossen Bappys World')->after('Welcome to');
-        echo $slice;
+        // echo "<h1> Fluent Strings</h1>";
+        // // $slice = Str::of('Welcome to Tanvir Hossen Bappys World')->after('Welcome to');
+        // echo $slice;
 
     }
 
